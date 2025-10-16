@@ -1,0 +1,120 @@
+# Project-specific folders
+logs/
+sessions/
+plots/
+
+# Virtual Environments
+venv/
+dc/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Matplotlib/Plot outputs (if you want to exclude them)
+*.png
+*.jpg
+*.jpeg
+*.pdf
+# Uncomment above if you don't want to track generated plots
+
+# Excel files (if generated for testing)
+*.xlsx
+*.xls
+# Uncomment above if you don't want to track generated Excel files
+
+# JSON data files (if you want to exclude collected data)
+# sessions/*.json
+# Uncomment above to ignore all JSON files in sessions folder
+
+# Configuration files with sensitive data
+config_local.py
+secrets.py
+*.key
+*.pem
+*.crt

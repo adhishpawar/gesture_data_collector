@@ -1,0 +1,18 @@
+# Gesture Data Collector - Python Dependencies
+# Install with: pip install -r requirements.txt
+# Tested and verified versions
+
+# Bluetooth Low Energy communication
+bleak==0.21.1
+
+# Async programming (built-in with Python 3.8+, but specified for compatibility)
+asyncio==3.4.3
+
+# Terminal colors and formatting
+colorama==0.4.6
+
+# Numerical computing and data processing
+numpy==1.26.3
+
+# Data visualization and plotting
+matplotlib==3.8.2

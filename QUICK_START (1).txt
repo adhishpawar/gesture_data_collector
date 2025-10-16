@@ -1,0 +1,310 @@
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              GESTURE DATA COLLECTOR - QUICK START                    ║
+║                                                                      ║
+║                    Get Started in 5 Minutes!                         ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+═════════════════════════════════════════════════════════════════════
+STEP 1: INSTALL (5 minutes)
+═════════════════════════════════════════════════════════════════════
+
+1. Extract ZIP file to your computer
+   Example: C:\Users\YourName\Documents\GestureCollector
+
+2. Open Command Prompt/Terminal
+
+3. Navigate to folder:
+
+   WINDOWS:
+   cd C:\Users\YourName\Documents\GestureCollector
+
+   MAC/LINUX:
+   cd /home/yourname/GestureCollector
+
+4. Create virtual environment named 'dc':
+
+   WINDOWS:
+   python -m venv dc
+
+   MAC/LINUX:
+   python3 -m venv dc
+
+5. Activate virtual environment:
+
+   WINDOWS:
+   dc\Scripts\activate
+
+   MAC/LINUX:
+   source dc/bin/activate
+
+   ✓ You should see (dc) at the beginning of command prompt
+
+6. Install dependencies:
+
+   pip install -r requirements.txt
+
+   Wait for installation (2-3 minutes)
+
+7. Test installation (OPTIONAL - without gloves):
+
+   python test_without_gloves.py
+
+   ✓ Should create test data in data/Test_User/
+
+
+═════════════════════════════════════════════════════════════════════
+STEP 2: FIRST RUN (2 minutes)
+═════════════════════════════════════════════════════════════════════
+
+1. Make sure virtual environment is activated:
+
+   ✓ You should see (dc) at the beginning of prompt
+
+   If not, activate again:
+
+   WINDOWS:
+   dc\Scripts\activate
+
+   MAC/LINUX:
+   source dc/bin/activate
+
+2. Power ON both gloves
+
+   ✓ Hold power button for 3 seconds
+   ✓ Check LED is blinking (pairing mode)
+
+3. Enable Bluetooth on computer
+
+   WINDOWS:
+   Settings → Bluetooth & devices → Turn ON
+
+   MAC:
+   System Preferences → Bluetooth → Turn ON
+
+   LINUX:
+   Bluetooth settings → Enable
+
+4. Run application:
+
+   python main.py
+
+5. Press: 1 (Connect to Gloves)
+
+6. Enter your name:
+
+   Enter your name: John
+
+   (This creates folder: data/John/)
+
+7. Enter session name:
+
+   Enter session name: TestSession
+
+   (This creates folder: data/John/TestSession/)
+
+8. Wait for connection (10-20 seconds)
+
+   🔍 Scanning for gloves...
+   ✓ Both gloves found!
+   ✓ Connecting...
+   ✅ CONNECTION SUCCESSFUL!
+
+
+═════════════════════════════════════════════════════════════════════
+STEP 3: RECORD GESTURE (1 minute)
+═════════════════════════════════════════════════════════════════════
+
+1. Press: 4 (Start Recording Gestures)
+
+   ✓ Ready - Waiting for button press...
+
+2. Press button on RIGHT glove
+
+   ⏺️  RECORDING STARTED
+
+   ✓ Perform your gesture now
+
+3. Wave your hand (or any gesture)
+
+   ⏺️  REC... L:125 R:128
+
+   (Shows frame count for left and right hands)
+
+4. Press button on RIGHT glove again
+
+   ⏹️  RECORDING STOPPED
+
+   📊 Captured: Left=245 frames, Right=248 frames
+
+5. Enter gesture name:
+
+   Enter custom name (or Enter for default): wave
+
+   OR just press Enter for timestamp-based name
+
+6. View plots (6 windows open automatically)
+
+   ✓ One window for each finger:
+     - IndexFinger
+     - MiddleFinger
+     - RingFinger
+     - LittleFinger
+     - Thumb
+     - Palm
+
+7. Close all plot windows to continue
+
+8. Done! Ready for next gesture
+
+   ✓ Repeat from step 2 for more gestures
+   ✓ OR press Ctrl+C to return to menu
+
+
+═════════════════════════════════════════════════════════════════════
+THAT'S IT!
+═════════════════════════════════════════════════════════════════════
+
+Your data is saved to:
+
+  data/John/TestSession/wave_20251016_103045.json  ← Gesture data
+  data/John/TestSession/wave_20251016_103045/      ← Plots folder
+    ├── IndexFinger.png
+    ├── MiddleFinger.png
+    ├── RingFinger.png
+    ├── LittleFinger.png
+    ├── Thumb.png
+    └── Palm.png
+
+
+═════════════════════════════════════════════════════════════════════
+EVERY TIME YOU RUN THE APP
+═════════════════════════════════════════════════════════════════════
+
+1. Open Command Prompt/Terminal
+
+2. Navigate to folder:
+   cd path/to/GestureCollector
+
+3. Activate virtual environment:
+
+   WINDOWS:
+   dc\Scripts\activate
+
+   MAC/LINUX:
+   source dc/bin/activate
+
+   ✓ Look for (dc) at the beginning of prompt
+
+4. Run application:
+   python main.py
+
+5. When done, deactivate (OPTIONAL):
+   deactivate
+
+
+═════════════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════════
+
+Problem: "Gloves not found"
+  ✓ Check if gloves are ON and charged
+  ✓ Enable Bluetooth on computer
+  ✓ Move closer to gloves (< 5 meters)
+  ✓ Restart gloves (power OFF/ON)
+
+Problem: "Python not found"
+  ✓ Install Python from python.org
+  ✓ Check "Add to PATH" during installation
+  ✓ Restart Command Prompt after installation
+
+Problem: "Module not found" (even after pip install)
+  ✓ Make sure virtual environment is activated (look for (dc))
+  ✓ Run: dc\Scripts\activate (Windows) or source dc/bin/activate (Mac/Linux)
+  ✓ Then run: pip install -r requirements.txt again
+
+Problem: "Virtual environment not found"
+  ✓ Create it again: python -m venv dc
+  ✓ Make sure you're in the correct folder
+
+Problem: "Permission denied" (Mac/Linux)
+  ✓ Try: sudo pip install -r requirements.txt
+  ✓ Or: pip install --user -r requirements.txt
+
+Problem: "Button press not detected"
+  ✓ Press and RELEASE button (don't hold)
+  ✓ Wait 1 second between presses
+  ✓ Make sure RIGHT glove button is used
+
+
+═════════════════════════════════════════════════════════════════════
+VIRTUAL ENVIRONMENT EXPLAINED
+═════════════════════════════════════════════════════════════════════
+
+What is 'dc'?
+  • 'dc' is a virtual environment (isolated Python installation)
+  • Keeps this project's dependencies separate from other Python projects
+  • Prevents version conflicts
+
+Why use it?
+  ✓ Clean installation (doesn't affect system Python)
+  ✓ Easy to delete (just delete 'dc' folder)
+  ✓ Reproducible (same versions every time)
+
+Folder structure after creation:
+  GestureCollector/
+  ├── dc/                    ← Virtual environment (don't edit)
+  │   ├── Scripts/           ← Windows executables
+  │   ├── bin/               ← Mac/Linux executables
+  │   ├── Lib/               ← Installed packages
+  │   └── ...
+  ├── data/                  ← Your gesture data
+  ├── main.py
+  ├── requirements.txt
+  └── ...
+
+To delete everything and start fresh:
+  1. Deactivate: deactivate
+  2. Delete 'dc' folder
+  3. Delete 'data' folder (if you want to remove saved gestures)
+  4. Start from STEP 1 again
+
+
+═════════════════════════════════════════════════════════════════════
+QUICK REFERENCE
+═════════════════════════════════════════════════════════════════════
+
+CREATE VENV (ONCE):
+  python -m venv dc
+
+ACTIVATE (EVERY TIME):
+  Windows:   dc\Scripts\activate
+  Mac/Linux: source dc/bin/activate
+
+INSTALL PACKAGES (ONCE):
+  pip install -r requirements.txt
+
+RUN APP:
+  python main.py
+
+DEACTIVATE (OPTIONAL):
+  deactivate
+
+
+═════════════════════════════════════════════════════════════════════
+NEED MORE HELP?
+═════════════════════════════════════════════════════════════════════
+
+📖 Read the complete USER_GUIDE.txt for:
+  • Detailed installation instructions
+  • Advanced features
+  • Complete troubleshooting guide
+  • FAQ section
+  • Data format explanation
+  • Browsing saved data
+
+
+═════════════════════════════════════════════════════════════════════
